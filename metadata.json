@@ -1,0 +1,10 @@
+{
+  "name": "Crema & Co. | Artisanal Roastery",
+  "description": "A refined, artisanal coffee shop experience featuring small-batch roasts and hand-crafted pastries.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

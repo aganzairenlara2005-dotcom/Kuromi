@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+
+  --color-brand-paper: #FAF9F6;
+  --color-brand-ink: #1C1C1C;
+  --color-brand-accent: #A68A64;
+
+  /* Creative Chromatic Palette */
+  --color-chroma-berry: #cf9ab2;
+  --color-chroma-matcha: #adbca5;
+  --color-chroma-honey: #e8c48c;
+  --color-chroma-deep: #8da9b0;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-paper text-brand-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.geometric-border {
+  @apply border-brand-ink;
+}
+
+.letter-spacing-widest {
+  @apply tracking-[0.2em];
+}
+
+.text-reveal {
+  @apply relative overflow-hidden;
+}
+
+.hover-line {
+  @apply relative;
+}
+
+.hover-line::after {
+  content: '';
+  @apply absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-ink transition-all duration-300;
+}
+
+.hover-line:hover::after {
+  @apply w-full;
+}
